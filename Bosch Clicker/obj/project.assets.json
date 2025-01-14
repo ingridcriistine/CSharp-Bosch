@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\disrct\\.nuget\\packages\\": {}
+    "C:\\Users\\ingri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Ingrid\\C#\\Clicker\\Clicker.csproj",
+      "projectUniqueName": "C:\\Users\\ingri\\Desktop\\CSharp-Bosch\\Bosch Clicker\\Clicker.csproj",
       "projectName": "Clicker",
-      "projectPath": "C:\\Users\\disrct\\Desktop\\Ingrid\\C#\\Clicker\\Clicker.csproj",
-      "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\disrct\\Desktop\\Ingrid\\C#\\Clicker\\obj\\",
+      "projectPath": "C:\\Users\\ingri\\Desktop\\CSharp-Bosch\\Bosch Clicker\\Clicker.csproj",
+      "packagesPath": "C:\\Users\\ingri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ingri\\Desktop\\CSharp-Bosch\\Bosch Clicker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ingri\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"

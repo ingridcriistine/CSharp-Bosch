@@ -1,6 +1,6 @@
 public class Cursor
 {
-    public int itemPs { get; set; } = 1;
-    public float price { get; set; } = 10.00f;
+    public int itemPs { get; set; } = 0;
+    public int price { get; set; } = 10;
     public int upgrade { get; set; } = 2;
 }

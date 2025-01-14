@@ -12,3 +12,18 @@ C:\Users\disrct\Desktop\Ingrid\C#\Clicker\obj\Debug\net9.0\refint\Clicker.dll
 C:\Users\disrct\Desktop\Ingrid\C#\Clicker\obj\Debug\net9.0\Clicker.pdb
 C:\Users\disrct\Desktop\Ingrid\C#\Clicker\obj\Debug\net9.0\Clicker.genruntimeconfig.cache
 C:\Users\disrct\Desktop\Ingrid\C#\Clicker\obj\Debug\net9.0\ref\Clicker.dll
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\bin\Debug\net9.0\Clicker.exe
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\bin\Debug\net9.0\Clicker.deps.json
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\bin\Debug\net9.0\Clicker.runtimeconfig.json
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\bin\Debug\net9.0\Clicker.dll
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\bin\Debug\net9.0\Clicker.pdb
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\obj\Debug\net9.0\Clicker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\obj\Debug\net9.0\Clicker.AssemblyInfoInputs.cache
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\obj\Debug\net9.0\Clicker.AssemblyInfo.cs
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\obj\Debug\net9.0\Clicker.csproj.CoreCompileInputs.cache
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\obj\Debug\net9.0\Clicker.sourcelink.json
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\obj\Debug\net9.0\Clicker.dll
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\obj\Debug\net9.0\refint\Clicker.dll
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\obj\Debug\net9.0\Clicker.pdb
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\obj\Debug\net9.0\Clicker.genruntimeconfig.cache
+C:\Users\ingri\Desktop\CSharp-Bosch\Bosch Clicker\obj\Debug\net9.0\ref\Clicker.dll
