@@ -1,3 +1,5 @@
+namespace Machine;
+
 public class Cursor
 {
     public int itemPs { get; set; } = 0;

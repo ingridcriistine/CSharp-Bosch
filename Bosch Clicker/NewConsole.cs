@@ -6,8 +6,10 @@ public static class NewConsole
     {
         var str = Console.ReadLine();
 
-        if(int.TryParse(str, out int i))
+        if (int.TryParse(str, out int i))
+        {
             return i;
+        }
 
         return null;
     }
@@ -20,5 +22,7 @@ public static class NewConsole
     }
 
     public static void Print(object obj)
-        => Console.WriteLine(obj.ToString());
+    {
+        Console.WriteLine(obj.ToString());
+    }
 }
