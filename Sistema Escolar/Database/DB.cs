@@ -10,7 +10,7 @@ public class DB<T>
 {
     private string basePath;
 
-    private DB(string basePath) => this.basePath = basePath;
+    public DB(string basePath) => this.basePath = basePath;
 
     public string DBPath
     {
