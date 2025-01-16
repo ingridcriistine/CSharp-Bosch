@@ -6,7 +6,7 @@ namespace Model.Repository;
 public class TurmaRepository : IRepository<Turma>
 {
     List<Turma> turmas = [];
-    DB<Turma> database = new("/Database");
+    DB<Turma> database = new("/Users/disrct/Desktop/Ingrid/CSharp-Bosch/Sistema Escolar/");
 
     public TurmaRepository()
     {

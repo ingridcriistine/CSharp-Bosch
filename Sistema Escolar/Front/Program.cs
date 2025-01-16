@@ -9,10 +9,15 @@ IRepository<Professor> professorRepo = null;
 IRepository<Turma> turmaRepo = null; 
 IRepository<Disciplina> disciplinaRepo = null; 
 
-alunoRepo = new AlunoFakeRepository();
-professorRepo = new ProfessorFakeRepository();
-turmaRepo = new TurmaFakeRepository();
-disciplinaRepo = new DisciplinaFakeRepository();
+// alunoRepo = new AlunoFakeRepository();
+// professorRepo = new ProfessorFakeRepository();
+// turmaRepo = new TurmaFakeRepository();
+// disciplinaRepo = new DisciplinaFakeRepository();
+
+alunoRepo = new AlunoRepository();
+professorRepo = new ProfessorRepository();
+turmaRepo = new TurmaRepository();
+disciplinaRepo = new DisciplinaRepository();
 
 while(true) {
     try

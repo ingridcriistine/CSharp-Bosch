@@ -6,7 +6,7 @@ namespace Model.Repository;
 public class ProfessorRepository : IRepository<Professor>
 {
     List<Professor> professores = [];
-    DB<Professor> database = new("/Database");
+    DB<Professor> database = new("/Users/disrct/Desktop/Ingrid/CSharp-Bosch/Sistema Escolar/");
 
     public ProfessorRepository()
     {

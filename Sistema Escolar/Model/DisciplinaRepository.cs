@@ -6,7 +6,7 @@ namespace Model.Repository;
 public class DisciplinaRepository : IRepository<Disciplina>
 {
     List<Disciplina> disciplinas = [];
-    DB<Disciplina> database = new("/Database");
+    DB<Disciplina> database = new("/Users/disrct/Desktop/Ingrid/CSharp-Bosch/Sistema Escolar/");
 
     public DisciplinaRepository()
     {
