@@ -15,11 +15,6 @@ public class Aluno : DataBaseObject
         this.Id = int.Parse(data[2]);
     }
 
-    protected override string[] SaveTo()
-        => new string[]
-        {
-            this.Nome,
-            this.Idade.ToString(),
-            this.Id.ToString()
-        };
+    protected override string[] SaveTo() =>
+        new string[] { this.Nome, this.Idade.ToString(), this.Id.ToString() };
 }

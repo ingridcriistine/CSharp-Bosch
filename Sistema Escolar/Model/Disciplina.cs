@@ -17,11 +17,6 @@ public class Disciplina : DataBaseObject
         this.Professores = data[2].Split('.').Select(i => int.Parse(i)).ToList();
     }
 
-    protected override string[] SaveTo()
-     => new string[]
-        {
-            this.Id.ToString(),
-            this.Nome,
-            string.Join('.', this.Professores)
-        };
+    protected override string[] SaveTo() =>
+        new string[] { this.Id.ToString(), this.Nome, string.Join('.', this.Professores) };
 }

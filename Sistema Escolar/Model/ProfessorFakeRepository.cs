@@ -6,23 +6,29 @@ public class ProfessorFakeRepository : IRepository<Professor>
 {
     List<Professor> professores = [];
 
-    public ProfessorFakeRepository() {
-        professores.Add(new(){
-            Id = 0,
-            Nome = "Gilmar",
-            Formacao = "Doutor"
-        });
-        professores.Add(new(){
-            Id = 1,
-            Nome = "Vanessa",
-            Formacao = "Doutora"
-        });
+    public ProfessorFakeRepository()
+    {
+        professores.Add(
+            new()
+            {
+                Id = 0,
+                Nome = "Gilmar",
+                Formacao = "Doutor",
+            }
+        );
+        professores.Add(
+            new()
+            {
+                Id = 1,
+                Nome = "Vanessa",
+                Formacao = "Doutora",
+            }
+        );
     }
 
     public List<Professor> All => professores;
 
-    public void Add(Professor obj) 
-        => this.professores.Add(obj);
+    public void Add(Professor obj) => this.professores.Add(obj);
 
     public Professor findById(int id)
     {
@@ -32,7 +38,8 @@ public class ProfessorFakeRepository : IRepository<Professor>
             {
                 return prof;
             }
-        };
+        }
+        ;
 
         return null;
     }

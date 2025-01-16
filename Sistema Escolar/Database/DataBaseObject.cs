@@ -2,6 +2,6 @@ namespace DataBase;
 
 public abstract class DataBaseObject
 {
-    internal protected abstract void LoadFrom(string[] data);
-    internal protected abstract string[] SaveTo();
+    protected internal abstract void LoadFrom(string[] data);
+    protected internal abstract string[] SaveTo();
 }

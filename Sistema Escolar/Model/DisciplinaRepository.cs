@@ -15,7 +15,7 @@ public class DisciplinaRepository : IRepository<Disciplina>
             {
                 Id = 1,
                 Nome = "10",
-                Professores = [0, 1]
+                Professores = [0, 1],
             }
         );
 
@@ -49,7 +49,8 @@ public class DisciplinaRepository : IRepository<Disciplina>
 
         for (int i = 0; i < disciplinas.Count; i++)
         {
-            if (disciplinas[i].Id > maior) {
+            if (disciplinas[i].Id > maior)
+            {
                 maior = disciplinas[i].Id;
             }
         }

@@ -57,7 +57,8 @@ public class ProfessorRepository : IRepository<Professor>
 
         for (int i = 0; i < professores.Count; i++)
         {
-            if (professores[i].Id > maior) {
+            if (professores[i].Id > maior)
+            {
                 maior = professores[i].Id;
             }
         }

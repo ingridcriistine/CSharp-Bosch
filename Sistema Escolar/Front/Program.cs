@@ -4,10 +4,10 @@ using Model;
 using Model.Repository;
 using static System.Console;
 
-IRepository<Aluno> alunoRepo = null;
-IRepository<Professor> professorRepo = null;
-IRepository<Turma> turmaRepo = null;
-IRepository<Disciplina> disciplinaRepo = null;
+IRepository<Aluno>? alunoRepo = null;
+IRepository<Professor>? professorRepo = null;
+IRepository<Turma>? turmaRepo = null;
+IRepository<Disciplina>? disciplinaRepo = null;
 
 // alunoRepo = new AlunoFakeRepository();
 // professorRepo = new ProfessorFakeRepository();
@@ -45,7 +45,7 @@ while (true)
             case 1:
                 Clear();
                 Professor professor = new();
-                professor.Id = professorRepo.getMaxId()+1;
+                professor.Id = professorRepo.getMaxId() + 1;
                 WriteLine("Insira o nome do professor: ");
                 professor.Nome = ReadLine();
                 WriteLine("Insira a formação: ");
@@ -56,7 +56,7 @@ while (true)
             case 2:
                 Clear();
                 Aluno aluno = new();
-                aluno.Id = alunoRepo.getMaxId()+1;
+                aluno.Id = alunoRepo.getMaxId() + 1;
                 WriteLine("Insira o nome do aluno: ");
                 aluno.Nome = ReadLine();
                 WriteLine("Insira a idade do aluno: ");
@@ -68,7 +68,7 @@ while (true)
                 Clear();
 
                 Turma turma = new();
-                turma.Id = turmaRepo.getMaxId()+1;
+                turma.Id = turmaRepo.getMaxId() + 1;
 
                 WriteLine("Insira o nome: ");
                 turma.Nome = ReadLine();
@@ -90,7 +90,8 @@ while (true)
                 {
                     for (int i = 0; i < disc.Professores.Count; i++)
                     {
-                        if (disc.Professores[i] == turma.Professor) {
+                        if (disc.Professores[i] == turma.Professor)
+                        {
                             WriteLine(
                                 $"""
                                     Disciplina: {disc.Id} - {disc.Nome}
@@ -103,7 +104,6 @@ while (true)
                             );
                         }
                     }
-
                 }
                 WriteLine("\nInsira o id da disciplina: ");
                 turma.Disciplina = int.Parse(ReadLine());
@@ -130,9 +130,12 @@ while (true)
                     else
                     {
                         var isValid = alunoRepo.findById(id);
-                        if (isValid == null) {
+                        if (isValid == null)
+                        {
                             WriteLine($"Digite um ID válido!");
-                        } else {
+                        }
+                        else
+                        {
                             alunosTurma.Add(id);
                         }
                     }
@@ -146,7 +149,7 @@ while (true)
                 Clear();
 
                 Disciplina disciplina = new();
-                disciplina.Id = disciplinaRepo.getMaxId()+1;
+                disciplina.Id = disciplinaRepo.getMaxId() + 1;
                 WriteLine("Insira o nome do disciplina: ");
                 disciplina.Nome = ReadLine();
 
@@ -169,9 +172,12 @@ while (true)
                     else
                     {
                         var isValid = professorRepo.findById(id);
-                        if (isValid == null) {
+                        if (isValid == null)
+                        {
                             WriteLine($"Digite um ID válido!");
-                        } else {
+                        }
+                        else
+                        {
                             profsDisciplina.Add(id);
                         }
                     }

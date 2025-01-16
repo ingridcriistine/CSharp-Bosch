@@ -54,7 +54,7 @@ public class AlunoFakeRepository : IRepository<Aluno>
             {
                 return alun;
             }
-        };
+        }
 
         return null;
     }

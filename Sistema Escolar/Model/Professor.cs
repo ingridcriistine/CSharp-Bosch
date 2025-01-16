@@ -15,11 +15,6 @@ public class Professor : DataBaseObject
         this.Id = int.Parse(data[2]);
     }
 
-    protected override string[] SaveTo()
-        => new string[]
-        {
-            this.Nome,
-            this.Formacao,
-            this.Id.ToString()
-        };
+    protected override string[] SaveTo() =>
+        new string[] { this.Nome, this.Formacao, this.Id.ToString() };
 }

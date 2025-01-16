@@ -73,7 +73,8 @@ public class AlunoRepository : IRepository<Aluno>
 
         for (int i = 0; i < alunos.Count; i++)
         {
-            if (alunos[i].Id > maior) {
+            if (alunos[i].Id > maior)
+            {
                 maior = alunos[i].Id;
             }
         }

@@ -8,17 +8,19 @@ public class TurmaFakeRepository : IRepository<Turma>
 
     public TurmaFakeRepository()
     {
-        turmas.Add(new(){
-            Id = 1,
-            Periodo = "Noturno",
-            Alunos = [0, 1, 2, 3]
-        });
+        turmas.Add(
+            new()
+            {
+                Id = 1,
+                Periodo = "Noturno",
+                Alunos = [0, 1, 2, 3],
+            }
+        );
     }
 
     public List<Turma> All => turmas;
 
-    public void Add(Turma obj)
-        => this.turmas.Add(obj);
+    public void Add(Turma obj) => this.turmas.Add(obj);
 
     public Turma findById(int id)
     {

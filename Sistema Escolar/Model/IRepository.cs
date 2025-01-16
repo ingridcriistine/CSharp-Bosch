@@ -8,6 +8,6 @@ public interface IRepository<T>
 {
     List<T> All { get; }
     void Add(T obj);
-    T findById(int id); 
+    T findById(int id);
     int getMaxId();
 }

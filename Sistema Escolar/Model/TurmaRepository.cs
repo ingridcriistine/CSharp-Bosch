@@ -49,7 +49,8 @@ public class TurmaRepository : IRepository<Turma>
 
         for (int i = 0; i < turmas.Count; i++)
         {
-            if (turmas[i].Id > maior) {
+            if (turmas[i].Id > maior)
+            {
                 maior = turmas[i].Id;
             }
         }
