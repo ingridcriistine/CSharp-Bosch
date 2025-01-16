@@ -1,13 +1,13 @@
-﻿using  static System.Console;
+﻿using System;
+using System.Collections.Generic;
 using Model;
 using Model.Repository;
-using System.Collections.Generic;
-using System;
+using static System.Console;
 
 IRepository<Aluno> alunoRepo = null;
-IRepository<Professor> professorRepo = null; 
-IRepository<Turma> turmaRepo = null; 
-IRepository<Disciplina> disciplinaRepo = null; 
+IRepository<Professor> professorRepo = null;
+IRepository<Turma> turmaRepo = null;
+IRepository<Disciplina> disciplinaRepo = null;
 
 // alunoRepo = new AlunoFakeRepository();
 // professorRepo = new ProfessorFakeRepository();
@@ -19,21 +19,24 @@ professorRepo = new ProfessorRepository();
 turmaRepo = new TurmaRepository();
 disciplinaRepo = new DisciplinaRepository();
 
-while(true) {
+while (true)
+{
     try
     {
         Clear();
-        WriteLine("""
-            1 - Cadastrar Professor
-            2 - Cadastrar Aluno
-            3 - Cadastrar Turma
-            4 - Cadastrar Disciplina
-            5 - Ver professores
-            6 - Ver alunos
-            7 - Ver turma
-            8 - Ver disciplina
-            9- Sair
-        """);
+        WriteLine(
+            """
+                1 - Cadastrar Professor
+                2 - Cadastrar Aluno
+                3 - Cadastrar Turma
+                4 - Cadastrar Disciplina
+                5 - Ver professores
+                6 - Ver alunos
+                7 - Ver turma
+                8 - Ver disciplina
+                9- Sair
+            """
+        );
 
         int option = int.Parse(ReadLine());
 
@@ -71,12 +74,13 @@ while(true) {
                 turma.Id = int.Parse(ReadLine());
                 WriteLine("Insira o periodo: ");
                 turma.Periodo = ReadLine();
-                
+
                 WriteLine("\nLista de professores cadastrados: ");
                 foreach (var prof in professorRepo.All)
                 {
                     WriteLine($"{prof.Id} - {prof.Nome} - {prof.Formacao}");
-                };
+                }
+                ;
                 WriteLine("\nInsira o id do professor: ");
                 turma.Professor = int.Parse(ReadLine());
 
@@ -84,19 +88,23 @@ while(true) {
                 foreach (var alun in alunoRepo.All)
                 {
                     WriteLine($"{alun.Id} - {alun.Nome} - {alun.Idade}");
-                };
+                }
+                ;
 
                 WriteLine("\n");
-                
-                List<int> alunosTurma = [];
-                while(true) {
 
+                List<int> alunosTurma = [];
+                while (true)
+                {
                     WriteLine($"Digite o ID do aluno para adicionar ou -1 para prosseguir: ");
                     int id = int.Parse(ReadLine());
 
-                    if(id == -1) {
+                    if (id == -1)
+                    {
                         break;
-                    } else {
+                    }
+                    else
+                    {
                         alunosTurma.Add(id);
                     }
                 }
@@ -117,17 +125,21 @@ while(true) {
                 foreach (var prof in professorRepo.All)
                 {
                     WriteLine($"{prof.Id} - {prof.Nome} - {prof.Formacao}");
-                };
+                }
+                ;
 
                 List<int> profsDisciplina = [];
-                while(true) {
-
+                while (true)
+                {
                     WriteLine($"Digite o ID do professor para adicionar ou 0 para prosseguir: ");
                     int id = int.Parse(ReadLine());
 
-                    if(id == 0) {
+                    if (id == 0)
+                    {
                         break;
-                    } else {
+                    }
+                    else
+                    {
                         profsDisciplina.Add(id);
                     }
                 }
@@ -139,89 +151,115 @@ while(true) {
                 var profs = professorRepo.All;
                 foreach (var prof in profs)
                 {
-                    WriteLine($"""
-                        {prof.Id} - {prof.Formacao} - {prof.Nome}
-                    ---------------------------------
-                    """);
-                };
+                    WriteLine(
+                        $"""
+                            {prof.Id} - {prof.Formacao} - {prof.Nome}
+                        ---------------------------------
+                        """
+                    );
+                }
+                ;
                 break;
 
             case 6:
                 var alunos = alunoRepo.All;
                 foreach (var alun in alunos)
                 {
-                    WriteLine($"""
-                        {alun.Id} - {alun.Nome} - {alun.Idade}
-                    ---------------------------------
-                    """);
-                };
+                    WriteLine(
+                        $"""
+                            {alun.Id} - {alun.Nome} - {alun.Idade}
+                        ---------------------------------
+                        """
+                    );
+                }
+                ;
                 break;
 
             case 7:
                 var turmas = turmaRepo.All;
-                WriteLine("""
-                ---------------------------------
-                """);
+                WriteLine(
+                    """
+                    ---------------------------------
+                    """
+                );
 
                 foreach (var turm in turmas)
                 {
-                    WriteLine($"""
-                        Turma: {turm.Id} - Período: {turm.Periodo}
-                        Professor responsável: {turm.Professor}
-                        Alunos matriculados:
-                    """);
+                    WriteLine(
+                        $"""
+                            Turma: {turm.Id} - Período: {turm.Periodo}
+                            Professor responsável: {turm.Professor}
+                            Alunos matriculados:
+                        """
+                    );
 
                     foreach (var id in turm.Alunos)
                     {
                         var alun = alunoRepo.findById(id);
-                        WriteLine($"""
-                            {alun.Id} - {alun.Nome}
-                        """);
-                    };
+                        WriteLine(
+                            $"""
+                                {alun.Id} - {alun.Nome}
+                            """
+                        );
+                    }
+                    ;
 
-                    WriteLine("""
-                    ---------------------------------
-                    """);
-                };
+                    WriteLine(
+                        """
+                        ---------------------------------
+                        """
+                    );
+                }
+                ;
                 break;
 
             case 8:
                 var disciplinas = disciplinaRepo.All;
 
-                WriteLine("""
-                ---------------------------------
-                """);
+                WriteLine(
+                    """
+                    ---------------------------------
+                    """
+                );
 
                 foreach (var disc in disciplinas)
                 {
-                    WriteLine($"""
-                        Disciplina: {disc.Id} - {disc.Nome}
-                        Professores:
-                    """);
+                    WriteLine(
+                        $"""
+                            Disciplina: {disc.Id} - {disc.Nome}
+                            Professores:
+                        """
+                    );
 
                     foreach (var id in disc.Professores)
                     {
                         var prof = professorRepo.findById(id);
-                        WriteLine($"""
-                            {prof.Id} - {prof.Nome}
-                        """);
-                    };
+                        WriteLine(
+                            $"""
+                                {prof.Id} - {prof.Nome}
+                            """
+                        );
+                    }
+                    ;
 
-                    WriteLine("""
-                    ---------------------------------
-                    """);
-                };
+                    WriteLine(
+                        """
+                        ---------------------------------
+                        """
+                    );
+                }
+                ;
                 break;
 
             case 9:
                 return;
-            
+
             default:
                 break;
         }
     }
-    catch (Exception e )
-    {   
+    catch
+    {
         // WriteLine(e);
         WriteLine("Erro na aplicação, por favor consulte a TI");
     }

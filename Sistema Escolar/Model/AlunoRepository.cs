@@ -6,7 +6,7 @@ namespace Model.Repository;
 public class AlunoRepository : IRepository<Aluno>
 {
     List<Aluno> alunos = [];
-    DB<Aluno> database = new("/Users/disrct/Desktop/Ingrid/CSharp-Bosch/Sistema Escolar/");
+    DB<Aluno> database = DB<Aluno>.App;
 
     public AlunoRepository()
     {
@@ -48,10 +48,11 @@ public class AlunoRepository : IRepository<Aluno>
 
     public List<Aluno> All => alunos;
 
-    public void Add(Aluno obj) {
+    public void Add(Aluno obj)
+    {
         this.alunos.Add(obj);
         database.Save(this.alunos);
-    } 
+    }
 
     public Aluno findById(int id)
     {

@@ -6,25 +6,29 @@ namespace Model.Repository;
 public class DisciplinaRepository : IRepository<Disciplina>
 {
     List<Disciplina> disciplinas = [];
-    DB<Disciplina> database = new("/Users/disrct/Desktop/Ingrid/CSharp-Bosch/Sistema Escolar/");
+    DB<Disciplina> database = DB<Disciplina>.App;
 
     public DisciplinaRepository()
     {
-        disciplinas.Add(new(){
-            Id = 1,
-            Nome = "10",
-            Professores = [0, 1]
-        });
+        disciplinas.Add(
+            new()
+            {
+                Id = 1,
+                Nome = "10",
+                Professores = [0, 1],
+            }
+        );
 
         disciplinas = database.All;
     }
 
     public List<Disciplina> All => disciplinas;
 
-    public void Add(Disciplina obj) {
+    public void Add(Disciplina obj)
+    {
         this.disciplinas.Add(obj);
         database.Save(this.disciplinas);
-    } 
+    }
 
     public Disciplina findById(int id)
     {

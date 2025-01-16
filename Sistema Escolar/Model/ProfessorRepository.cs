@@ -6,7 +6,7 @@ namespace Model.Repository;
 public class ProfessorRepository : IRepository<Professor>
 {
     List<Professor> professores = [];
-    DB<Professor> database = new("/Users/disrct/Desktop/Ingrid/CSharp-Bosch/Sistema Escolar/");
+    DB<Professor> database = DB<Professor>.App;
 
     public ProfessorRepository()
     {
@@ -32,10 +32,11 @@ public class ProfessorRepository : IRepository<Professor>
 
     public List<Professor> All => professores;
 
-    public void Add(Professor obj) {
+    public void Add(Professor obj)
+    {
         this.professores.Add(obj);
         database.Save(this.professores);
-    } 
+    }
 
     public Professor findById(int id)
     {
