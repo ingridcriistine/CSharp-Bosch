@@ -47,8 +47,21 @@ public class ProfessorRepository : IRepository<Professor>
                 return prof;
             }
         }
-        ;
 
         return null;
+    }
+
+    public int getMaxId()
+    {
+        var maior = 0;
+
+        for (int i = 0; i < professores.Count; i++)
+        {
+            if (professores[i].Id > maior) {
+                maior = professores[i].Id;
+            }
+        }
+
+        return maior;
     }
 }

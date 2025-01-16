@@ -45,8 +45,7 @@ while (true)
             case 1:
                 Clear();
                 Professor professor = new();
-                WriteLine("Insira o id do professor: ");
-                professor.Id = int.Parse(ReadLine());
+                professor.Id = professorRepo.getMaxId()+1;
                 WriteLine("Insira o nome do professor: ");
                 professor.Nome = ReadLine();
                 WriteLine("Insira a formação: ");
@@ -57,8 +56,7 @@ while (true)
             case 2:
                 Clear();
                 Aluno aluno = new();
-                WriteLine("Insira o id do aluno: ");
-                aluno.Id = int.Parse(ReadLine());
+                aluno.Id = alunoRepo.getMaxId()+1;
                 WriteLine("Insira o nome do aluno: ");
                 aluno.Nome = ReadLine();
                 WriteLine("Insira a idade do aluno: ");
@@ -70,8 +68,11 @@ while (true)
                 Clear();
 
                 Turma turma = new();
-                WriteLine("Insira o codigo da turma: ");
-                turma.Id = int.Parse(ReadLine());
+                turma.Id = turmaRepo.getMaxId()+1;
+
+                WriteLine("Insira o nome: ");
+                turma.Nome = ReadLine();
+
                 WriteLine("Insira o periodo: ");
                 turma.Periodo = ReadLine();
 
@@ -83,6 +84,29 @@ while (true)
                 ;
                 WriteLine("\nInsira o id do professor: ");
                 turma.Professor = int.Parse(ReadLine());
+
+                WriteLine("\nLista de disciplinas cadastradas: ");
+                foreach (var disc in disciplinaRepo.All)
+                {
+                    for (int i = 0; i < disc.Professores.Count; i++)
+                    {
+                        if (disc.Professores[i] == turma.Professor) {
+                            WriteLine(
+                                $"""
+                                    Disciplina: {disc.Id} - {disc.Nome}
+                                """
+                            );
+                            WriteLine(
+                                """
+                                ---------------------------------
+                                """
+                            );
+                        }
+                    }
+
+                }
+                WriteLine("\nInsira o id da disciplina: ");
+                turma.Disciplina = int.Parse(ReadLine());
 
                 WriteLine("\nLista de alunos cadastrados: ");
                 foreach (var alun in alunoRepo.All)
@@ -105,7 +129,12 @@ while (true)
                     }
                     else
                     {
-                        alunosTurma.Add(id);
+                        var isValid = alunoRepo.findById(id);
+                        if (isValid == null) {
+                            WriteLine($"Digite um ID válido!");
+                        } else {
+                            alunosTurma.Add(id);
+                        }
                     }
                 }
 
@@ -115,9 +144,9 @@ while (true)
 
             case 4:
                 Clear();
+
                 Disciplina disciplina = new();
-                WriteLine("Insira o codigo da disciplina: ");
-                disciplina.Id = int.Parse(ReadLine());
+                disciplina.Id = disciplinaRepo.getMaxId()+1;
                 WriteLine("Insira o nome do disciplina: ");
                 disciplina.Nome = ReadLine();
 
@@ -126,129 +155,190 @@ while (true)
                 {
                     WriteLine($"{prof.Id} - {prof.Nome} - {prof.Formacao}");
                 }
-                ;
 
                 List<int> profsDisciplina = [];
                 while (true)
                 {
-                    WriteLine($"Digite o ID do professor para adicionar ou 0 para prosseguir: ");
+                    WriteLine($"Digite o ID do professor para adicionar ou -1 para prosseguir: ");
                     int id = int.Parse(ReadLine());
 
-                    if (id == 0)
+                    if (id == -1)
                     {
                         break;
                     }
                     else
                     {
-                        profsDisciplina.Add(id);
+                        var isValid = professorRepo.findById(id);
+                        if (isValid == null) {
+                            WriteLine($"Digite um ID válido!");
+                        } else {
+                            profsDisciplina.Add(id);
+                        }
                     }
                 }
 
+                disciplina.Professores = profsDisciplina;
                 disciplinaRepo.Add(disciplina);
                 break;
 
             case 5:
+                Clear();
+
                 var profs = professorRepo.All;
-                foreach (var prof in profs)
+                if (professorRepo.All.Count == 0)
                 {
                     WriteLine(
                         $"""
-                            {prof.Id} - {prof.Formacao} - {prof.Nome}
-                        ---------------------------------
+                        A lista está vazia!
                         """
                     );
                 }
-                ;
+                else
+                {
+                    foreach (var prof in profs)
+                    {
+                        WriteLine(
+                            $"""
+                                {prof.Id} - {prof.Formacao} - {prof.Nome}
+                            ---------------------------------
+                            """
+                        );
+                    }
+                }
+
                 break;
 
             case 6:
+                Clear();
+
                 var alunos = alunoRepo.All;
-                foreach (var alun in alunos)
+
+                if (alunoRepo.All.Count == 0)
                 {
                     WriteLine(
                         $"""
-                            {alun.Id} - {alun.Nome} - {alun.Idade}
-                        ---------------------------------
+                        A lista está vazia!
                         """
                     );
                 }
-                ;
+                else
+                {
+                    foreach (var alun in alunos)
+                    {
+                        WriteLine(
+                            $"""
+                                {alun.Id} - {alun.Nome} - {alun.Idade}
+                            ---------------------------------
+                            """
+                        );
+                    }
+                }
+
                 break;
 
             case 7:
-                var turmas = turmaRepo.All;
-                WriteLine(
-                    """
-                    ---------------------------------
-                    """
-                );
+                Clear();
 
-                foreach (var turm in turmas)
+                var turmas = turmaRepo.All;
+
+                if (turmaRepo.All.Count == 0)
                 {
                     WriteLine(
                         $"""
-                            Turma: {turm.Id} - Período: {turm.Periodo}
-                            Professor responsável: {turm.Professor}
-                            Alunos matriculados:
+                        A lista está vazia!
                         """
                     );
-
-                    foreach (var id in turm.Alunos)
-                    {
-                        var alun = alunoRepo.findById(id);
-                        WriteLine(
-                            $"""
-                                {alun.Id} - {alun.Nome}
-                            """
-                        );
-                    }
-                    ;
-
+                }
+                else
+                {
                     WriteLine(
                         """
                         ---------------------------------
                         """
                     );
+
+                    foreach (var turm in turmas)
+                    {
+                        var prof = professorRepo.findById(turm.Professor);
+                        var disc = disciplinaRepo.findById(turm.Disciplina);
+                        WriteLine(
+                            $"""
+                                Cod: {turm.Id} - Turma: {turm.Nome} - Período: {turm.Periodo}
+                                Professor responsável: {prof.Nome}
+                                Disciplina: {disc.Nome}
+                                Alunos matriculados:
+                            """
+                        );
+
+                        foreach (var id in turm.Alunos)
+                        {
+                            var alun = alunoRepo.findById(id);
+                            WriteLine(
+                                $"""
+                                    {alun.Id} - {alun.Nome}
+                                """
+                            );
+                        }
+
+                        WriteLine(
+                            """
+                            ---------------------------------
+                            """
+                        );
+                    }
                 }
-                ;
+
                 break;
 
             case 8:
+                Clear();
+
                 var disciplinas = disciplinaRepo.All;
 
-                WriteLine(
-                    """
-                    ---------------------------------
-                    """
-                );
-
-                foreach (var disc in disciplinas)
+                if (disciplinaRepo.All.Count == 0)
                 {
                     WriteLine(
                         $"""
-                            Disciplina: {disc.Id} - {disc.Nome}
-                            Professores:
+                        A lista está vazia!
                         """
                     );
-
-                    foreach (var id in disc.Professores)
-                    {
-                        var prof = professorRepo.findById(id);
-                        WriteLine(
-                            $"""
-                                {prof.Id} - {prof.Nome}
-                            """
-                        );
-                    }
-                    ;
-
+                }
+                else
+                {
                     WriteLine(
                         """
                         ---------------------------------
                         """
                     );
+
+                    foreach (var disc in disciplinas)
+                    {
+                        WriteLine(
+                            $"""
+                                Disciplina: {disc.Id} - {disc.Nome}
+                                Professores:
+                            """
+                        );
+
+                        foreach (var id in disc.Professores)
+                        {
+                            var prof = professorRepo.findById(id);
+                            WriteLine(
+                                $"""
+                                    {prof.Id} - {prof.Nome}
+                                """
+                            );
+                        }
+                        ;
+
+                        WriteLine(
+                            """
+                            ---------------------------------
+                            """
+                        );
+                    }
                 }
-                ;
+
                 break;
 
             case 9:
@@ -258,9 +348,9 @@ while (true)
                 break;
         }
     }
-    catch
+    catch (Exception e)
     {
-        // WriteLine(e);
+        WriteLine(e);
         WriteLine("Erro na aplicação, por favor consulte a TI");
     }
 

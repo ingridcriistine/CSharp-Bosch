@@ -58,4 +58,9 @@ public class AlunoFakeRepository : IRepository<Aluno>
 
         return null;
     }
+
+    public int getMaxId()
+    {
+        throw new System.NotImplementedException();
+    }
 }

@@ -32,6 +32,28 @@ public class TurmaRepository : IRepository<Turma>
 
     public Turma findById(int id)
     {
-        throw new System.NotImplementedException();
+        foreach (var turm in turmas)
+        {
+            if (turm.Id == id)
+            {
+                return turm;
+            }
+        }
+
+        return null;
+    }
+
+    public int getMaxId()
+    {
+        var maior = 0;
+
+        for (int i = 0; i < turmas.Count; i++)
+        {
+            if (turmas[i].Id > maior) {
+                maior = turmas[i].Id;
+            }
+        }
+
+        return maior;
     }
 }

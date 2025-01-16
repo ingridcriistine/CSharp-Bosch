@@ -135,7 +135,7 @@ public class DB<T>
     }
 
     private static DB<T> temp = null;
-    public static DB<T> Temp
+    public static DB<T> Temp //salva em uma pasta temporária
     {
         get
         {
@@ -146,7 +146,7 @@ public class DB<T>
     }
 
     private static DB<T> app = null;
-    public static DB<T> App
+    public static DB<T> App //salva na pasta onde está o executável
     {
         get
         {
@@ -158,7 +158,7 @@ public class DB<T>
     }
 
     private static DB<T> custom = null;
-    public static DB<T> Custom
+    public static DB<T> Custom //salva em uma pasta customizada
     {
         get
         {

@@ -24,4 +24,9 @@ public class TurmaFakeRepository : IRepository<Turma>
     {
         throw new System.NotImplementedException();
     }
+
+    public int getMaxId()
+    {
+        throw new System.NotImplementedException();
+    }
 }

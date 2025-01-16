@@ -15,7 +15,7 @@ public class DisciplinaRepository : IRepository<Disciplina>
             {
                 Id = 1,
                 Nome = "10",
-                Professores = [0, 1],
+                Professores = [0, 1]
             }
         );
 
@@ -32,6 +32,28 @@ public class DisciplinaRepository : IRepository<Disciplina>
 
     public Disciplina findById(int id)
     {
-        throw new System.NotImplementedException();
+        foreach (var disc in disciplinas)
+        {
+            if (disc.Id == id)
+            {
+                return disc;
+            }
+        }
+
+        return null;
+    }
+
+    public int getMaxId()
+    {
+        var maior = 0;
+
+        for (int i = 0; i < disciplinas.Count; i++)
+        {
+            if (disciplinas[i].Id > maior) {
+                maior = disciplinas[i].Id;
+            }
+        }
+
+        return maior;
     }
 }

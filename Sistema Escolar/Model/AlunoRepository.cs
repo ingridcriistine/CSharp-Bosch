@@ -63,8 +63,21 @@ public class AlunoRepository : IRepository<Aluno>
                 return alun;
             }
         }
-        ;
 
         return null;
+    }
+
+    public int getMaxId()
+    {
+        var maior = 0;
+
+        for (int i = 0; i < alunos.Count; i++)
+        {
+            if (alunos[i].Id > maior) {
+                maior = alunos[i].Id;
+            }
+        }
+
+        return maior;
     }
 }

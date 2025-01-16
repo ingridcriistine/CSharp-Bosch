@@ -36,4 +36,9 @@ public class ProfessorFakeRepository : IRepository<Professor>
 
         return null;
     }
+
+    public int getMaxId()
+    {
+        throw new System.NotImplementedException();
+    }
 }
