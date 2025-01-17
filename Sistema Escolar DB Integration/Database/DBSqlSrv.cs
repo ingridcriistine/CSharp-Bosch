@@ -21,7 +21,6 @@ public class DBSqlSrv<T>
         conn = new SqlConnection(connection);
     }
 
-
     public List<T> All
     {
         get
@@ -51,10 +50,7 @@ public class DBSqlSrv<T>
     {
         string values = obj.SaveToSql();
         conn.Open();
-        SqlCommand cmd = new(values)
-        {
-            Connection = conn
-        };
+        SqlCommand cmd = new(values) { Connection = conn };
         cmd.ExecuteNonQuery();
         conn.Close();
     }
