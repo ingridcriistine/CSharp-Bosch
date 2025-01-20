@@ -1,7 +1,5 @@
 ﻿int[] array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-var result = array
-    .Where(i => i % 2 == 0)
-    .Select(i => i * i);
+var result = array.Where(i => i % 2 == 0).Select(i => i * i);
 
 System.Console.WriteLine(array.FirstOrDefault());
 System.Console.WriteLine(array.LastOrDefault());
@@ -14,8 +12,42 @@ System.Console.WriteLine(array.Preprend(3));
 System.Console.WriteLine(array.Count());
 System.Console.WriteLine(result);
 
+
+Pessoa[] pessoas = [
+    new Pessoa("Don", "123"),
+    new Pessoa("Queila", "456")
+];
+
+var query = pessoas
+    .Where(p => p.Cpf.Length < 4)
+    .Select(p => p.Nome);
+
+var quer2 =
+    from p in pessoas
+    where p.Cpf.Length < 4
+    select p.Nome;
+
+Pagamento[] pagamento = [
+    new Pagamento("123", 1000),
+    new Pagamento("123", 800),
+    new Pagamento("123", 250),
+    new Pagamento("456", 3000),
+]
+
+var pagamentoDados = pessoas
+.Join(pagamentoDados, p => p.Cpf, p => p.Cpf, 
+(pessoa, pagamento) => new { pessoa.Nome, pagamento.Valor });
+
+public record Pessoa(string Nome, string Cpf);
+public record Pagamento(string Cpf, decimal Valor);
+
 public static class Enumerator
 {
+    public static void Join<T, U, K, R> (this IEnumerable<T> source, IEnumerable<U> other, Func<T, K> keyA, Func<U, K> keyB, Func<T, U, R> map) 
+    {
+
+    }
+
     public static IEnumerable<R> Select<T, R>(this IEnumerable<T> source, Func<T, R> map)
     {
         foreach (var item in source)
