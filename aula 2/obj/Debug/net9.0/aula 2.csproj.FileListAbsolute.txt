@@ -1,0 +1,15 @@
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\obj\Debug\net9.0\aula 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\obj\Debug\net9.0\aula 2.AssemblyInfoInputs.cache
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\obj\Debug\net9.0\aula 2.AssemblyInfo.cs
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\obj\Debug\net9.0\aula 2.csproj.CoreCompileInputs.cache
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\obj\Debug\net9.0\aula 2.sourcelink.json
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\bin\Debug\net9.0\aula 2.exe
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\bin\Debug\net9.0\aula 2.deps.json
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\bin\Debug\net9.0\aula 2.runtimeconfig.json
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\bin\Debug\net9.0\aula 2.dll
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\bin\Debug\net9.0\aula 2.pdb
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\obj\Debug\net9.0\aula 2.dll
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\obj\Debug\net9.0\refint\aula 2.dll
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\obj\Debug\net9.0\aula 2.pdb
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\obj\Debug\net9.0\aula 2.genruntimeconfig.cache
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\aula 2\obj\Debug\net9.0\ref\aula 2.dll

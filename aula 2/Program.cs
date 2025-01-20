@@ -1,47 +1,61 @@
 ﻿int[] array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 var result = array.FirstOrDefault<int>();
 
+System.Console.WriteLine(array.FirstOrDefault());
+System.Console.WriteLine(array.LastOrDefault());
+System.Console.WriteLine(array.ToArray());
+System.Console.WriteLine(array.ToList());
+System.Console.WriteLine(array.Take(5));
+System.Console.WriteLine(array.Skip(5));
+System.Console.WriteLine(array.Append(3));
+System.Console.WriteLine(array.Preprend(3));
+System.Console.WriteLine(array.Count());
+
 public static class Enumerator
 {
     public static T? FirstOrDefault<T>(this IEnumerable<T> coll)
     {
         var it = coll.GetEnumerator();
 
-        if (it.MoveNext()) =>
-            return it.Current();
+        if (it.MoveNext())
+        {
+            return it.Current;
+        }
 
-        else => 
-            return default;
+        return default;
     }
 
     public static T? LastOrDefault<T>(this IEnumerable<T> coll)
     {
         var it = coll.GetEnumerator();
-        var r;
+        T r;
 
-        if (it.MoveNext()) {
-            r = it.Current();
+        if (it.MoveNext())
+        {
+            r = it.Current;
 
-            while(it.MoveNext()) {
-                r = it.Current();
+            while (it.MoveNext())
+            {
+                r = it.Current;
             }
             return r;
         }
-
-        else => 
+        else
+        {
             return default;
+        }
     }
 
     public static T[] ToArray<T>(this IEnumerable<T> coll)
     {
         var it = coll.GetEnumerator();
-        var size = Count(it);
-        T[] array = [size];
-        
+        var size = coll.Count();
+        T[] array = new T[size];
+
         for (int i = 0; i < size; i++)
         {
-            it.MoveNext()
-            array[i] = it.Current();
+            it.MoveNext();
+            array[i] = it.Current;
         }
 
         return array;
@@ -52,10 +66,11 @@ public static class Enumerator
         var it = coll.GetEnumerator();
         List<T> list = [];
 
-        while(it.MoveNext()) {
-            list.Append(it.Current());
+        while (it.MoveNext())
+        {
+            list.Add(it.Current);
         }
-            
+
         return list;
     }
 
@@ -64,8 +79,8 @@ public static class Enumerator
         var it = coll.GetEnumerator();
         for (int i = 0; i < num; i++)
         {
-            if (it.MoveNext()) 
-                yield return it.Current();
+            if (it.MoveNext())
+                yield return it.Current;
         }
     }
 
@@ -77,8 +92,8 @@ public static class Enumerator
             it.MoveNext();
         }
 
-        while (it.MoveNext()) => 
-            yield return it.Current();
+        while (it.MoveNext())
+            yield return it.Current;
     }
 
     public static IEnumerable<T> Append<T>(this IEnumerable<T> coll, T item)
@@ -86,10 +101,11 @@ public static class Enumerator
         var it = coll.GetEnumerator();
         List<T> list = [];
 
-        while(it.MoveNext()) {
-            list.Append(it.Current());
+        while (it.MoveNext())
+        {
+            list.Add(it.Current);
         }
-        list.Append(item);
+        list.Add(item);
 
         return list;
     }
@@ -99,9 +115,10 @@ public static class Enumerator
         var it = coll.GetEnumerator();
         List<T> list = [];
 
-        list.Append(item);
-        while(it.MoveNext()) {
-            list.Append(it.Current());
+        list.Add(item);
+        while (it.MoveNext())
+        {
+            list.Add(it.Current);
         }
 
         return list;
@@ -112,7 +129,7 @@ public static class Enumerator
         var it = coll.GetEnumerator();
         int count = 0;
 
-        while (it.MoveNext()) => 
+        while (it.MoveNext())
             count++;
 
         return count;
