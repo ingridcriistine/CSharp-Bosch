@@ -1,5 +1,7 @@
 ﻿int[] array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-var result = array.FirstOrDefault<int>();
+var result = array
+    .Where(i => i % 2 == 0)
+    .Select(i => i * i);
 
 System.Console.WriteLine(array.FirstOrDefault());
 System.Console.WriteLine(array.LastOrDefault());
@@ -10,9 +12,25 @@ System.Console.WriteLine(array.Skip(5));
 System.Console.WriteLine(array.Append(3));
 System.Console.WriteLine(array.Preprend(3));
 System.Console.WriteLine(array.Count());
+System.Console.WriteLine(result);
 
 public static class Enumerator
 {
+    public static IEnumerable<R> Select<T, R>(this IEnumerable<T> source, Func<T, R> map)
+    {
+        foreach (var item in source)
+            yield return map(item);
+    }
+
+    public static IEnumerable<T> Where<T>(this IEnumerable<T> source, Func<T, bool> predicate)
+    {
+        foreach (var item in source)
+        {
+            if (predicate(item))
+                yield return item;
+        }
+    }
+
     public static T? FirstOrDefault<T>(this IEnumerable<T> coll)
     {
         var it = coll.GetEnumerator();
