@@ -28,14 +28,23 @@ var query2 =
     on matricula equals turma.Id
     join prof in uni.Professores
     on turma.ProfessorId equals prof.Id
-    select new {Nome = aluno.Nome, Idade = aluno.Idade, Turma = turma.Codigo, Prof = prof.Nome};
+    select new {aluno.Nome, aluno.Idade, Codigo = turma.Codigo, Prof = prof.Nome} into dados
+    group dados by new{dados.Nome, dados.Idade, dados.Codigo} into colunas
+    select new {Nome = colunas.Key.Nome, Idade = colunas.Key.Idade, Turma = colunas.Key.Codigo, Prof = colunas.Select(dados => dados.Prof).ToList()};
     
 foreach (var aluno in query2)
 {
     WriteLine($"""
     Nome: {aluno.Nome} | Idade: {aluno.Idade}
     Matriculas: 
-    Turma: {aluno.Turma} | Professor: {aluno.Prof}
+    
+    """);
+    foreach(var prof in aluno.Prof) {
+        WriteLine($"""
+        Turma: {aluno.Turma} | Professor: {prof}
+        """);
+    }
+    WriteLine($"""
     ----------------------------------------------------------------
     """);
 }
@@ -97,21 +106,31 @@ WriteLine(
     """
 );
 var query5 =
-    from aluno in uni.Alunos
+    (from aluno in uni.Alunos
     from matricula in aluno.Matriculas
     join turma in uni.Turmas
     on matricula equals turma.Id
     join prof in uni.Professores
     on turma.ProfessorId equals prof.Id
-    select new {Aluno = aluno.Nome, prof.Salario, Professor = prof.Nome} into dados
-    group dados by dados.Aluno into g
-    let custoAluno = g.Sum(x => x.Salario)
-    select new {Nome = g.Key, Custo = custoAluno+300};
+    select new {Aluno = aluno.Nome, Salario = prof.Salario, Professor = prof.Nome, Turma = turma.Id} into dados
+    group dados by new {dados.Professor, dados.Salario} into g
+    let countTurmas = g.Count()
+    let salarioTurma = g.Key.Salario / countTurmas
+    let countAlunosTurma = g.Select(dados => dados.Aluno).Count()
+    let custoAlunoTurma = (salarioTurma / countAlunosTurma) 
+    select new {Aluno = g.Select(dados => new {Nome = dados.Aluno, Custo = custoAlunoTurma})})
+    .SelectMany(x => x.Aluno)
+    .GroupBy(x => x.Nome)
+    .Select(g => new {
+        Nome = g.Key,
+        Custo = 300 + g.Sum(x => x.Custo)
+    });
 
 foreach (var aluno in query5)
 {
     WriteLine($"""
-    Nome: {aluno.Nome} | Custo: {aluno.Custo}
+    Nome: {aluno.Nome} | Custo: R$ {Math.Round(aluno.Custo, 2)}
+    -----------------------------------
     """);
 }
 
