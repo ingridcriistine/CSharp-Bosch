@@ -1,0 +1,15 @@
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\bin\Debug\net9.0\Pattern Matching.exe
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\bin\Debug\net9.0\Pattern Matching.deps.json
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\bin\Debug\net9.0\Pattern Matching.runtimeconfig.json
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\bin\Debug\net9.0\Pattern Matching.dll
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\bin\Debug\net9.0\Pattern Matching.pdb
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\obj\Debug\net9.0\Pattern Matching.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\obj\Debug\net9.0\Pattern Matching.AssemblyInfoInputs.cache
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\obj\Debug\net9.0\Pattern Matching.AssemblyInfo.cs
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\obj\Debug\net9.0\Pattern Matching.csproj.CoreCompileInputs.cache
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\obj\Debug\net9.0\Pattern Matching.sourcelink.json
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\obj\Debug\net9.0\Pattern Matching.dll
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\obj\Debug\net9.0\refint\Pattern Matching.dll
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\obj\Debug\net9.0\Pattern Matching.pdb
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\obj\Debug\net9.0\Pattern Matching.genruntimeconfig.cache
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Pattern Matching\obj\Debug\net9.0\ref\Pattern Matching.dll
