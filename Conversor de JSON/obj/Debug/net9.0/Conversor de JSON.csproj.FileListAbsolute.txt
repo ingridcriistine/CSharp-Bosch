@@ -1,0 +1,15 @@
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\bin\Debug\net9.0\Conversor de JSON.exe
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\bin\Debug\net9.0\Conversor de JSON.deps.json
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\bin\Debug\net9.0\Conversor de JSON.runtimeconfig.json
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\bin\Debug\net9.0\Conversor de JSON.dll
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\bin\Debug\net9.0\Conversor de JSON.pdb
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\obj\Debug\net9.0\Conversor de JSON.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\obj\Debug\net9.0\Conversor de JSON.AssemblyInfoInputs.cache
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\obj\Debug\net9.0\Conversor de JSON.AssemblyInfo.cs
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\obj\Debug\net9.0\Conversor de JSON.csproj.CoreCompileInputs.cache
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\obj\Debug\net9.0\Conversor de JSON.sourcelink.json
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\obj\Debug\net9.0\Conversor de JSON.dll
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\obj\Debug\net9.0\refint\Conversor de JSON.dll
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\obj\Debug\net9.0\Conversor de JSON.pdb
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\obj\Debug\net9.0\Conversor de JSON.genruntimeconfig.cache
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Conversor de JSON\obj\Debug\net9.0\ref\Conversor de JSON.dll

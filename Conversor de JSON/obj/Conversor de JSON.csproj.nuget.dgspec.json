@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Bosch Clicker\\Clicker.csproj": {}
+    "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Conversor de JSON\\Conversor de JSON.csproj": {}
   },
   "projects": {
-    "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Bosch Clicker\\Clicker.csproj": {
+    "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Conversor de JSON\\Conversor de JSON.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Bosch Clicker\\Clicker.csproj",
-        "projectName": "Clicker",
-        "projectPath": "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Bosch Clicker\\Clicker.csproj",
+        "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Conversor de JSON\\Conversor de JSON.csproj",
+        "projectName": "Conversor de JSON",
+        "projectPath": "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Conversor de JSON\\Conversor de JSON.csproj",
         "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Bosch Clicker\\obj\\",
+        "outputPath": "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Conversor de JSON\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Pattern Matching\\Pattern Matching.csproj",
-      "projectName": "Pattern Matching",
-      "projectPath": "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Pattern Matching\\Pattern Matching.csproj",
+      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Conversor de JSON\\Conversor de JSON.csproj",
+      "projectName": "Conversor de JSON",
+      "projectPath": "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Conversor de JSON\\Conversor de JSON.csproj",
       "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Pattern Matching\\obj\\",
+      "outputPath": "C:\\Users\\disrct\\Desktop\\Ingrid\\CSharp-Bosch\\Conversor de JSON\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
