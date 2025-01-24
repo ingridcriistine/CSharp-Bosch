@@ -26,38 +26,40 @@ public static class Converter
     {
         var objeto = obj.GetType();
 
-        Console.WriteLine(objeto);
+        // Console.WriteLine(objeto);
 
         var props = objeto.GetProperties();
 
         foreach (var item in props)
         {
             var propertyName = item.Name;
-            Console.WriteLine($"Atributo: {propertyName}");
+            // Console.WriteLine($"Atributo: {propertyName}");
 
             var propertyValue = item.GetValue(obj);
-            Console.WriteLine($"Valor: {propertyValue}");
+            // Console.WriteLine($"Valor: {propertyValue}");
             
             if (propertyValue is IEnumerable e && item.PropertyType != typeof(string)) {
                 ident(sb, tab+1);
                 sb.Append($" '{propertyName}' : " + "[");
                 
                 foreach (var itemList in e) {
-                    sb.AppendLine("\t\t{");
+                    ident(sb, tab+1);
+                    sb.AppendLine("{");
                     if (itemList.GetType().IsClass && itemList.GetType() != typeof(string)) {
-                        toJson(itemList, sb, tab);
+                        toJson(itemList, sb, tab+1);
                         continue;
                     }
 
-                     sb.AppendLine($"\t'{propertyName}' : '{itemList.ToString()}',");
-                    sb.AppendLine("\t\t}");
+                    ident(sb, tab-1);
+                    sb.AppendLine($"\t'{propertyName}' : '{itemList.ToString()}',");
+                    ident(sb, tab+1);
                 }
  
                 sb.AppendLine("]");
             }
 
             else if (item.PropertyType.IsClass && item.PropertyType != typeof(string)) {
-                toJson(propertyValue, sb, tab);
+                toJson(propertyValue, sb, tab+1);
             }
 
             else
