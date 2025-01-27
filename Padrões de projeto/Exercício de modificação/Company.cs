@@ -4,15 +4,15 @@ public class Company
 {
     // Estrutura Singleton
     private Company() { }
-    private static Company crr = null;
+    private static Company? crr = null;
     public static Company Current => crr;
     public string Name { get; set; }
     public decimal Money { get; set; }
     private List<Employe> employes = new List<Employe>();
     public IEnumerable<Employe> Employes => employes;
-    private DismissalProcess dismissalProcess = null;
-    private WagePaymentProcess wagePaymentProcess = null;
-    private AdmissionalProcess admissionalProcess = null;
+    private DismissalProcess? dismissalProcess = null;
+    private WagePaymentProcess? wagePaymentProcess = null;
+    private AdmissionalProcess? admissionalProcess = null;
     public void Contract(Employe employe)
     {
         if (employe == null)
@@ -59,8 +59,8 @@ public class CompanyBuilder
         public CompanyBuilder SetFactory(IProcessFactory factory)
         {
             company.dismissalProcess = factory.CreateDismissalProcess();
-            company.wagePaymentProcess =
-            factory.CreateWagePaymentProcess();
+            company.wagePaymentProcess = factory.CreateWagePaymentProcess();
+            company.admissionalProcess = factory.CreateAdmissionalProcess();
             return this;
         }
         public CompanyBuilder SetInitialCapital(decimal money)

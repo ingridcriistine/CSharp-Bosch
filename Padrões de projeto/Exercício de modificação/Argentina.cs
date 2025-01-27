@@ -20,8 +20,8 @@ public class ArgentinaAdmissionalProcess : AdmissionalProcess
 
     public override void Hire(AdmissionalArgs args)
     {
-        args.Company.Money -= args.Employe.Wage;
-        args.Employe.WorkSchedule = 6;
+        args.Company.Money -= 800;
+        args.Employe.WorkSchedule = 6*5;
     }
 }
 
