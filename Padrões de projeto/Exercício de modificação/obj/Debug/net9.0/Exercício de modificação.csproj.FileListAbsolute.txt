@@ -1,0 +1,15 @@
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\bin\Debug\net9.0\Exercício de modificação.exe
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\bin\Debug\net9.0\Exercício de modificação.deps.json
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\bin\Debug\net9.0\Exercício de modificação.runtimeconfig.json
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\bin\Debug\net9.0\Exercício de modificação.dll
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\bin\Debug\net9.0\Exercício de modificação.pdb
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\obj\Debug\net9.0\Exercício de modificação.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\obj\Debug\net9.0\Exercício de modificação.AssemblyInfoInputs.cache
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\obj\Debug\net9.0\Exercício de modificação.AssemblyInfo.cs
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\obj\Debug\net9.0\Exercício de modificação.csproj.CoreCompileInputs.cache
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\obj\Debug\net9.0\Exercício de modificação.sourcelink.json
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\obj\Debug\net9.0\Exercício de modificação.dll
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\obj\Debug\net9.0\refint\Exercício de modificação.dll
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\obj\Debug\net9.0\Exercício de modificação.pdb
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\obj\Debug\net9.0\Exercício de modificação.genruntimeconfig.cache
+C:\Users\disrct\Desktop\Ingrid\CSharp-Bosch\Padrões de projeto\Exercício de modificação\obj\Debug\net9.0\ref\Exercício de modificação.dll
