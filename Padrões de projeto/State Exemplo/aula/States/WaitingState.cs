@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using Radiance;
 
-public class WaitingState() : State
+public class WaitingState(Character mark) : State
 {
     DateTime? lastTime = null;
 
@@ -20,7 +20,10 @@ public class WaitingState() : State
 
         character?.SetState(new MovingState(
             Random.Shared.Next(Window.Width),
-            Random.Shared.Next(Window.Height)
+            Random.Shared.Next(Window.Height),
+            mark
         ));
+
+        
     }
 }

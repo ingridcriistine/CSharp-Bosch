@@ -2,26 +2,29 @@ using System.Drawing;
 using System.Xml.Serialization;
 using Radiance;
 using Radiance.Bufferings;
+using Radiance.Primitives;
 using static Radiance.Utils;
 
-public class Character (vec4 characterColor)
+public class Character (string foto, vec4 characterColor)
 {
-    dynamic charRender = render((vec2 dx) =>
+    Texture pic = Textures.Open(foto);
+    dynamic charRender = render((img photo, vec2 dx) =>
     {
-        zoom(40);
+        zoom(60);
         move(dx);
-        color = characterColor;
+        // color = characterColor;
+        color = texture(photo, x - dx.x + 45, y - dx.y + 45);
         fill();
-
     });
     Polygon polygon = Polygons.Circle;
     public void Draw()
     {
-        charRender(polygon, X, Y);
+        charRender(polygon, pic, X, Y);
     }
 
     public float X { get; set; } = Random.Shared.Next(200);
     public float Y { get; set; } = Random.Shared.Next(200);
+    public int type { get; set; } = 1;
 
     State? state = null;
     public void SetState(State state)
