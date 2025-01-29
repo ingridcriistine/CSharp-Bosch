@@ -1,6 +1,13 @@
 ﻿using Radiance;
 using static Radiance.Utils;
 
+var cenario = Textures.Open("cenario.png");
+var cenarioRender = render((img photo) =>
+{
+    color = texture(photo, x * photo.xratio, y * photo.yratio);
+    fill();
+});
+
 Character garu = new Character("garu.png", blue);
 Character pucca = new Character("pucca.png", red);
 pucca.type = 0;
@@ -17,6 +24,7 @@ Window.OnFrame += () =>
 
 Window.OnRender += () =>
 {
+    cenarioRender(Polygons.Screen, cenario);
     pucca.Draw();
     garu.Draw();
 };

@@ -10,8 +10,9 @@ public class Character (string foto, vec4 characterColor)
     Texture pic = Textures.Open(foto);
     dynamic charRender = render((img photo, vec2 dx) =>
     {
-        zoom(60);
+        zoom(50);
         move(dx);
+        move(0, 0, 1);
         // color = characterColor;
         color = texture(photo, x - dx.x + 45, y - dx.y + 45);
         fill();
